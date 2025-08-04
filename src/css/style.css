@@ -1,0 +1,54 @@
+*{
+    --Text-color: white;
+    --Background-color: rgb(6, 52, 93);
+    --Navbar-color:rgb(25, 89, 141);
+    --Button-color :rgb(57, 136, 200);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: var(--Background-color);
+    color: white;
+    padding: 100px;
+    text-align: center;
+    background-image: url(../res/banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: var(--Navbar-color);
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--Text-color);
+    text-decoration: none;
+    background-color: var(--Button-color);
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: rgb(5, 28, 47);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
