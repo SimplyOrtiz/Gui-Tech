@@ -52,3 +52,10 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+#promocao{
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
