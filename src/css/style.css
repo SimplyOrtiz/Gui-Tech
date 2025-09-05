@@ -59,3 +59,48 @@ footer {
     align-self: center;
     justify-self: center;
 }
+
+/* Form CSS */
+main form {
+    background-color: var(--Background-color);
+    color: var(--Text-color);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+main form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+main form input[type="text"],
+main form input[type="email"],
+main form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+main form button[type="submit"] {
+    background-color: var(--Button-color);
+    color: var(--Text-color);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+main form button[type="submit"]:hover {
+    background-color: var(--Navbar-color);
+}
