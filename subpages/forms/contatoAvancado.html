@@ -25,14 +25,17 @@
                 <h2>Etapa 1: Dados Pessoais</h2>
                 <input type="text" placeholder="Nome"><br>
                 <input type="email" placeholder="E-mail"><br>
-                <button class="stepButton" onclick="proximaEtapa()">Próxima</button>
+                
+                <button type="button" class="stepButton" onclick="proximaEtapa()">Próxima</button>
             </div>
 
             <div id="Etapa2" style="display:none;">
                 <h2>Etapa 2: Endereço</h2>
                 <input type="text" placeholder="Rua"><br>
                 <input type="text" placeholder="Cidade"><br>
-                <button class="stepButton" onclick="voltarEtapa()">Voltar</button>
+
+                <button type="button" class="stepButton" onclick="voltarEtapa()">Voltar</button>
+
                 <button type="submit" value="Finalizar">Finalizar</button>
             </div>
         </form>
@@ -43,32 +46,14 @@
     </footer>
 
     <script>
-        function delay(time) {
-            return new Promise(resolve => setTimeout(resolve, time));
+        function proximaEtapa() {
+            document.getElementById("Etapa1").style.display = "none";
+            document.getElementById("Etapa2").style.display = "block";
         }
 
-        var canGo = true
-
-        async function proximaEtapa() {
-            if (canGo == true) {
-                document.getElementById("Etapa1").style.display = "none";
-                document.getElementById("Etapa2").style.display = "block";
-
-                canGo = false
-                await delay(1000); // Wait for 1 second (1000 milliseconds)
-                canGo = true
-            }
-        }
-
-        async function voltarEtapa() {
-            if (canGo == true) {
-                document.getElementById("Etapa1").style.display = "block";
-                document.getElementById("Etapa2").style.display = "none";
-
-                canGo = false
-                await delay(1000); // Wait for 1 second (1000 milliseconds)
-                canGo = true
-            }
+        function voltarEtapa() {
+            document.getElementById("Etapa1").style.display = "block";
+            document.getElementById("Etapa2").style.display = "none";
         }
     </script>
 </body>
