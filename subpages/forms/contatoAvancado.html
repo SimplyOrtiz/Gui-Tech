@@ -43,14 +43,32 @@
     </footer>
 
     <script>
-        function proximaEtapa() {
-            document.getElementById("Etapa1").style.display = "none";
-            document.getElementById("Etapa2").style.display = "block";
+        function delay(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
         }
 
-        function voltarEtapa() {
-            document.getElementById("Etapa1").style.display = "block";
-            document.getElementById("Etapa2").style.display = "none";
+        var canGo = true
+
+        async function proximaEtapa() {
+            if (canGo == true) {
+                document.getElementById("Etapa1").style.display = "none";
+                document.getElementById("Etapa2").style.display = "block";
+
+                canGo = false
+                await delay(1000); // Wait for 1 second (1000 milliseconds)
+                canGo = true
+            }
+        }
+
+        async function voltarEtapa() {
+            if (canGo == true) {
+                document.getElementById("Etapa1").style.display = "block";
+                document.getElementById("Etapa2").style.display = "none";
+
+                canGo = false
+                await delay(1000); // Wait for 1 second (1000 milliseconds)
+                canGo = true
+            }
         }
     </script>
 </body>
