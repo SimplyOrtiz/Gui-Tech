@@ -89,7 +89,7 @@ main form input[type="password"] {
     box-sizing: border-box; /* Ensures padding doesn't affect the width */
 }
 
-main form button[type="submit"] {
+.stepButton, main form button[type="submit"] {
     background-color: var(--Button-color);
     color: var(--Text-color);
     padding: 15px 20px;
@@ -101,7 +101,7 @@ main form button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-main form button[type="submit"]:hover {
+.stepButton:hover ,main form button[type="submit"]:hover {
     background-color: var(--Navbar-color);
 }
 
@@ -119,4 +119,9 @@ main form button[type="reset"] {
 
 main form button[type="reset"]:hover {
     background-color: var(--Navbar-color);
+}
+
+p a{
+    color: paleturquoise;
+    text-decoration: none;
 }
