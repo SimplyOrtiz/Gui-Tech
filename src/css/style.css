@@ -89,22 +89,8 @@ main form input[type="password"] {
     box-sizing: border-box; /* Ensures padding doesn't affect the width */
 }
 
-.stepButton, main form button[type="submit"] {
-    background-color: var(--Button-color);
-    color: var(--Text-color);
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.stepButton:hover ,main form button[type="submit"]:hover {
-    background-color: var(--Navbar-color);
-}
-
+.stepButton,
+main form button[type="submit"],
 main form button[type="reset"] {
     background-color: var(--Button-color);
     color: var(--Text-color);
@@ -117,6 +103,8 @@ main form button[type="reset"] {
     transition: background-color 0.3s ease;
 }
 
+.stepButton:hover,
+main form button[type="submit"]:hover,
 main form button[type="reset"]:hover {
     background-color: var(--Navbar-color);
 }
